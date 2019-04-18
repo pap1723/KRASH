@@ -102,6 +102,13 @@ namespace KRASH
 				Log.Warning("[KRASH-TF] TestFlightManagerScenario.SettingsEnabled was not found");
 				return;
 			}
+			// Add TestLite as Well
+			var tlAssembly = AssemblyLoader.loadedAssemblies.FirstOrDefault(a => a.assembly.GetName().Name == "TestLite");
+			if (tlAssembly == null)
+			{
+				Log.Warning("[KRASH-TL] Failed to load TestLite assembly");
+				return;
+			}
 			Log.Info("[KRASH-TF] TestFlight integration successful");
 			testFlightLoaded = true;
 		}
