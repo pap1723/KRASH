@@ -1680,7 +1680,7 @@ namespace KRASH
             if (KRASH.testFlightLoaded)
             {
                 GUILayout.BeginHorizontal();
-                KRASHShelter.instance.disableTestFlightForSim = GUILayout.Toggle(KRASHShelter.instance.disableTestFlightForSim, "Disable TestFlight");
+                KRASHShelter.instance.disableTestFlightForSim = GUILayout.Toggle(KRASHShelter.instance.disableTestFlightForSim, "Disable Engine Failures");
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
             }
